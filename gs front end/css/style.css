@@ -320,3 +320,72 @@ span {
     min-width: 50px;
     text-align: center;
 }
+
+.Relato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 30px;
+    background-color: #EAF2F8;
+    border-radius: 16px;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+}
+
+.Relato h2,
+.Relato p {
+    margin: 0;
+    text-align: center;
+}
+
+.Relato form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.Relato label {
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.Relato input,
+.Relato textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #2F4A6B;
+    border-radius: 8px;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+}
+
+.Relato textarea {
+    resize: vertical;
+}
+
+.Relato button {
+    align-self: center;
+    background-color: var(--cor-cabecalho);
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Relato button:hover {
+    background-color: #1b8cce;
+}
+
+#mensagem-formulario {
+    min-height: 20px;
+    font-weight: bold;
+}

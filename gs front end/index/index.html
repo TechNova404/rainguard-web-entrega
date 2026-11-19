@@ -89,6 +89,31 @@
         <img src="../images/foto3secao5.png" alt="Homens trabalhando para construir uma barreira de contenção de água, com o objetivo de proteger uma área vulnerável a enchentes.">
     </div>
 </section>
+<section id="consulta-monitoramento" class="Relato">
+    <h2>Consultar monitoramento</h2>
+    <p>Digite um dos dois endereços combinados para ver as leituras demonstrativas.</p>
+
+    <form id="form-consulta" novalidate>
+        <label for="endereco-consulta">Endereço</label>
+        <input
+            type="text"
+            id="endereco-consulta"
+            name="endereco"
+            placeholder="Digite o endereço"
+        >
+
+        <button type="submit">Consultar</button>
+        <p id="mensagem-formulario"></p>
+    </form>
+
+    <div id="resultado-consulta" hidden>
+        <h3 id="endereco-resultado"></h3>
+        <p>Chuva: <span id="chuva-consulta">--</span> mm/h</p>
+        <p>Nível da água: <span id="nivel-consulta">--</span> cm</p>
+        <p>Status: <span id="status-consulta">--</span></p>
+        <p>Alerta: <span id="alerta-consulta">--</span></p>
+    </div>
+</section>
 <footer>
     <h3>RainGuard</h3>
     <p>Monitoramento de chuvas e prevenção de enchentes.</p>
