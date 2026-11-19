@@ -40,6 +40,7 @@ botaoAnterior.addEventListener("click", function () {
 });
 
 let formularioConsulta = document.getElementById("form-consulta");
+let botaoLimparConsulta = document.getElementById("limpar-consulta");
 let enderecoConsulta = document.getElementById("endereco-consulta");
 let mensagemFormulario = document.getElementById("mensagem-formulario");
 let resultadoConsulta = document.getElementById("resultado-consulta");
@@ -143,4 +144,10 @@ formularioConsulta.addEventListener("submit", function (event) {
     alertaConsulta.textContent = textoAlerta;
 
     resultadoConsulta.hidden = false;
+});
+
+botaoLimparConsulta.addEventListener("click", function () {
+    formularioConsulta.reset();
+    mensagemFormulario.textContent = "";
+    resultadoConsulta.hidden = true;
 });
