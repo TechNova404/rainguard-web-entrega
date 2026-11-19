@@ -141,6 +141,13 @@ formularioConsulta.addEventListener("submit", function (event) {
     chuvaConsulta.textContent = leituraEncontrada.chuva;
     nivelConsulta.textContent = leituraEncontrada.nivel;
     statusConsulta.textContent = statusFinal;
+    if (statusFinal === "Normal") {
+    statusConsulta.style.color = "#167a3e";
+} else if (statusFinal === "Atenção") {
+    statusConsulta.style.color = "#9a6700";
+} else {
+    statusConsulta.style.color = "#c62828";
+}
     alertaConsulta.textContent = textoAlerta;
 
     resultadoConsulta.hidden = false;
