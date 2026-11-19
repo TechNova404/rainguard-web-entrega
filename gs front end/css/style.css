@@ -289,3 +289,34 @@ footer p {
 span {
     color: #0e9aeb;
 }
+
+.controles-slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto 30px;
+}
+
+.controles-slideshow button {
+    background-color: var(--cor-cabecalho);
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controles-slideshow button:hover {
+    background-color: #1b8cce;
+}
+
+#contador-imagem {
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+}
