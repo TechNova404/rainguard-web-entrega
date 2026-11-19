@@ -49,22 +49,21 @@ let nivelConsulta = document.getElementById("nivel-consulta");
 let statusConsulta = document.getElementById("status-consulta");
 let alertaConsulta = document.getElementById("alerta-consulta");
 
-// DADOS DE DEMONSTRAÇÃO: estes números serão ajustados
-let chuvaAtencao = 20;
-let chuvaCritico = 50;
-let nivelAtencao = 30;
-let nivelCritico = 60;
+// LIMITES DO PROJETO: chuva forte eleva o estado em um nível
+let chuvaForte = 30;
+let nivelAtencao = 10;
+let nivelCritico = 25;
 
 let leiturasDemonstracao = [
     {
         endereco: "Ricardo Jafet x Paulo Bregaro",
         chuva: 25,
-        nivel: 35
+        nivel: 10
     },
     {
         endereco: "Teresa Cristina x Tabor",
         chuva: 55,
-        nivel: 70
+        nivel: 25
     }
 ];
 
@@ -107,33 +106,25 @@ formularioConsulta.addEventListener("submit", function (event) {
     leituraEncontrada = {
         endereco: enderecoConsulta.value.trim(),
         chuva: Math.floor(Math.random() * 80),
-        nivel: Math.floor(Math.random() * 100)
+        nivel: Math.floor(Math.random() * 41)
     };
 
     mensagemFormulario.textContent =
         "Endereço sem leitura estudada: resultado aleatório para demonstração.";
 }
 
-    let statusChuva = classificarLeitura(
-        leituraEncontrada.chuva,
-        chuvaAtencao,
-        chuvaCritico
-    );
-
-    let statusNivel = classificarLeitura(
+    let statusFinal = classificarLeitura(
         leituraEncontrada.nivel,
         nivelAtencao,
         nivelCritico
     );
 
-    let statusFinal = "Normal";
-
-    if (statusChuva === "Atenção" || statusNivel === "Atenção") {
-        statusFinal = "Atenção";
-    }
-
-    if (statusChuva === "Crítico" || statusNivel === "Crítico") {
-        statusFinal = "Crítico";
+    if (leituraEncontrada.chuva >= chuvaForte) {
+        if (statusFinal === "Normal") {
+            statusFinal = "Atenção";
+        } else if (statusFinal === "Atenção") {
+            statusFinal = "Crítico";
+        }
     }
 
     let textoAlerta = "Sem alerta nos dados demonstrativos.";
