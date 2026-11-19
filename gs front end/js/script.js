@@ -83,7 +83,8 @@ formularioConsulta.addEventListener("submit", function (event) {
     mensagemFormulario.textContent = "";
     resultadoConsulta.hidden = true;
 
-    let enderecoDigitado = enderecoConsulta.value.trim().toLowerCase();
+    let enderecoDigitado =
+    enderecoConsulta.value.trim().toLowerCase().replace(/\s+/g, " ");
 
     if (enderecoDigitado === "") {
         mensagemFormulario.textContent = "Digite um endereço para consultar.";
@@ -94,7 +95,7 @@ formularioConsulta.addEventListener("submit", function (event) {
 
     for (let i = 0; i < leiturasDemonstracao.length; i++) {
         let enderecoCadastrado =
-            leiturasDemonstracao[i].endereco.toLowerCase();
+             leiturasDemonstracao[i].endereco.trim().toLowerCase().replace(/\s+/g, " ");
 
         if (enderecoDigitado === enderecoCadastrado) {
             leituraEncontrada = leiturasDemonstracao[i];
