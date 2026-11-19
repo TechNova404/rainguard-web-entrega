@@ -57,7 +57,11 @@
         <img src="../images/foto2secao3.jpg" alt="Medidor utilizado para acompanhar o nível da água.">
         <img src="../images/foto3secao3.jpg" alt="Pessoa acompanhando as codições de chuva em um computador.">
     </div>
-    
+    <div class="controles-slideshow">
+        <button id="imagem-anterior" type="button">Anterior</button>
+        <span id="contador-imagem">1 de 3</span>
+        <button id="imagem-proxima" type="button">Próxima</button>
+    </div>   
 </section>
 
 <section id="Publico-alvo" class="Publico-alvo">
@@ -85,11 +89,39 @@
         <img src="../images/foto3secao5.png" alt="Homens trabalhando para construir uma barreira de contenção de água, com o objetivo de proteger uma área vulnerável a enchentes.">
     </div>
 </section>
+<section id="consulta-monitoramento" class="Relato">
+    <h2>Consultar monitoramento</h2>
+    <p>Digite um endereço. Os pontos estudados têm leituras fixas; outros recebem valores aleatórios para demonstração.</p>
+
+    <form id="form-consulta" novalidate>
+        <label for="endereco-consulta">Endereço</label>
+        <input
+            type="text"
+            id="endereco-consulta"
+            name="endereco"
+            aria-describedby="mensagem-formulario"
+            placeholder="Digite o endereço"
+        >
+
+        <button type="submit">Consultar</button>
+        <button type="button" id="limpar-consulta">Limpar consulta</button>
+        <p id="mensagem-formulario" aria-live="polite"></p>
+    </form>
+
+    <div id="resultado-consulta" aria-live="polite" hidden>
+        <h3 id="endereco-resultado"></h3>
+        <p>Chuva: <span id="chuva-consulta">--</span> mm/h</p>
+        <p>Nível da água: <span id="nivel-consulta">--</span> cm</p>
+        <p>Status: <span id="status-consulta">--</span></p>
+        <p>Alerta: <span id="alerta-consulta">--</span></p>
+    </div>
+</section>
 <footer>
     <h3>RainGuard</h3>
     <p>Monitoramento de chuvas e prevenção de enchentes.</p>
     <p>Global Solution CitizenTech — FIAP</p>
     <p>© 2026 RainGuard.</p>
 </footer>
+<script src="../js/script.js"></script>
 </body>
 </html>

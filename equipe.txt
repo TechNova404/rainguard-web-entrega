@@ -1,0 +1,10 @@
+RainGuard — Web
+
+Integrantes:
+João Vitor Cordeiro de Godoi — RM 576228
+Filipe Silva Fava — RM 574535
+Kaio Henrique dos Santos Sousa — RM 574401
+Matheus Silveira Salvatico — RM 575556
+Mateus Latorre da Silva — RM 574670
+
+Link do repositório GitHub: https://github.com/TechNova404/rainguard-web-entrega
