@@ -7,4 +7,4 @@ Kaio Henrique dos Santos Sousa — RM 574401
 Matheus Silveira Salvatico — RM 575556
 Mateus Latorre da Silva — RM 574670
 
-Link do repositório GitHub: https://github.com/TechNova404/front-end
+Link do repositório GitHub: https://github.com/TechNova404/rainguard-web-entrega
